@@ -1,4 +1,5 @@
 import React from 'react';
+import NavLink from './NavLink';
 const navItemsName = [
     {
         path:'/',
@@ -16,7 +17,7 @@ const navItemsName = [
         path:'/contact',
         title:"Contact",
     },
-]
+];
 const Navbar = () => {
     return (
         <nav className='flex justify-between container'>
@@ -25,7 +26,9 @@ const Navbar = () => {
                 {
                     navItemsName.map(({path, title})=>(
                         <li className='mx-2' key={path}>
-                            {title}
+                            <NavLink exact={path === "/"} activeClassName={"text-blue-500"} href={path} >
+                                {title}
+                            </NavLink>
                         </li>
                     ))
                 }
