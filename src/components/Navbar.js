@@ -26,7 +26,7 @@ const Navbar = () => {
                 {
                     navItemsName.map(({path, title})=>(
                         <li className='mx-2' key={path}>
-                            <NavLink exact={path === "/"} activeClassName={"text-blue-500"} href={path} >
+                            <NavLink exact={path === "/"} activeClassName={"text-blue-500 underline underline-offset-8"} href={path} >
                                 {title}
                             </NavLink>
                         </li>
